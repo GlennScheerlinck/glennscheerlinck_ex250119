@@ -1,0 +1,12 @@
+question 8
+db.bioinf.find({"method_of_admission": ["TABLET; BUCCAL, SIBLINGUAL"]},{"drug":1});
+
+question 9
+db.bioinf.count({percentage_of_side_effects:{$gt:8}})
+
+question 10
+db.bioinf.find({percentage_of_side_effects:{$gt:10}},{"company":1}).sort({percentage_of_side_effects:-1})
+
+question 11
+db.bioinf.find()
+
