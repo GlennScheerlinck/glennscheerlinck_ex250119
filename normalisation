@@ -1,0 +1,26 @@
+Normalise this data up to 3NF, taking in to account these constraints:
+
+    Each personnel number is unique
+    Each lab has a single lab code
+    Each research project has a single code and supervisor
+    Each member of the personnel may work on one or more research projects
+    Personnel names need not necessarily be unique
+    Research code, description and supervisor are repeating fields
+
+UNF: write everything together in a line
+	research(personelno, name, birth, labcode, labname, research code, research descr, research supervisor)
+
+1NF: eliminate repeating groups, separate table and id the primary key (PK)
+	personel(personelno(PK), name, birth, labcode, labname)
+	research(personelno(PK), research code(PK), research descr, research supervisor)
+
+2NF: non prime attributes of the table is dependat on the primary keys)
+	personel(personelno(PK), name, birth, labcode(PK))
+	lab(labcode(PK), labname)
+	research(personelno(PK), research code(PK), research descr, research supervisor)
+
+3NF: non prime attributes is dependant on every key.
+	personel(personelno(PK), name, birth, labcode(PK))
+        lab(labcode(PK), labname)
+	research(personelno(PK), research code(PK))
+	research2(research code(PK), research descr, research supervisor)
