@@ -1,0 +1,5 @@
+question 12
+curl 'http://rest.ensembl.org/variation/mouse/rs/4224828?' -H 'Content-type:application/json'
+
+question 13
+curl 'http://rest.ensembl.org/sequence/region/zebrafish/MYCN01004489.1:1..100?coord_system=seqlevel' -H 'Content-type:text/x-fasta'
